@@ -16,18 +16,13 @@ export class AppComponent {
   }
 
   readonly menus: Array<PoMenuItem> = [
-    { label: 'Home', action: this.onClick.bind(this) },
-    { label:'Consulta Cnpj',action:()=>this.router.navigate(['cnpj-list'])},
+    { label: 'Home', action:()=>this.router.navigate(['']) },
+    { label:'Consulta Cnpj', action:()=>this.router.navigate(['cnpj-list'])},
     { label:'Fornecedor',action:()=>this.router.navigate(['fornecedor-list'])}
 
 
 
   ];
-
-
-  private onClick() {
-    alert('Clicked in menu item')
-  }
 
 
 }

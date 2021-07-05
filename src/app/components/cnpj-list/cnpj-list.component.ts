@@ -1,8 +1,5 @@
-
 import { Component, OnInit } from '@angular/core';
 import { PoDynamicFormField } from '@po-ui/ng-components';
-
-
 
 
 @Component({
@@ -12,7 +9,6 @@ import { PoDynamicFormField } from '@po-ui/ng-components';
 })
 export class ClientListComponent implements OnInit {
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
 
@@ -23,12 +19,12 @@ export class ClientListComponent implements OnInit {
     {
       property: 'CNPJ',
       required: true,
-      minLength: 4,
-      maxLength: 50,
+      minLength: 14,
+      maxLength: 14,
       gridColumns: 6,
       gridSmColumns: 12,
       order: 1,
-      placeholder: ''
+      placeholder: 'É obrigatório o preenchimento de um CNPJ '
     },
   ]
 
