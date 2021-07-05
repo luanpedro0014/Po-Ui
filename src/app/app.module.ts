@@ -7,8 +7,10 @@ import { PoModule } from '@po-ui/ng-components';
 import { RouterModule } from '@angular/router';
 import { ClientListComponent } from './components/cnpj-list/cnpj-list.component';
 import { FornecedorListComponent } from './components/fornecedor-list/fornecedor-list.component';
-import { ClientFormComponent } from './components/client-form/client-form.component';
 import { PoDynamicModule } from '@po-ui/ng-components';
+import { HomeComponent } from './components/home/home.component';
+import {  HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { PoDynamicModule } from '@po-ui/ng-components';
     AppComponent,
     ClientListComponent,
     FornecedorListComponent,
-    ClientFormComponent
+    HomeComponent
+
 
   ],
   imports: [
@@ -24,7 +27,9 @@ import { PoDynamicModule } from '@po-ui/ng-components';
     AppRoutingModule,
     PoModule,
     RouterModule.forRoot([]),
-    PoDynamicModule
+    PoDynamicModule,
+HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
