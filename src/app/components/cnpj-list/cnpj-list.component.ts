@@ -40,7 +40,7 @@ export class ClientListComponent implements OnInit {
 
     this.chamada = this.httpClient.get(this.url + '10480616000160', { headers: this.headers })
       .subscribe((response: any) => {
-        alert('CNPJ Cadastrado xx');
+        alert('CNPJ Cadastrado ' + response.nome_fantasia);
       });
 
    }
