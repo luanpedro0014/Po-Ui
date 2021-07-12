@@ -28,7 +28,7 @@ export class CadastroService {
   }
 
   // Obtem um CNPJ pelo id
-  getCadastroById(CNPJ: number): Observable<Cadastro> {
+  getCadastroById(CNPJ: string): Observable<Cadastro> {
     return this.httpClient.get<Cadastro>(this.url + '/' + CNPJ)
       .pipe(
         retry(2),

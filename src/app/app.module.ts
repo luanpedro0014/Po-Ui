@@ -10,6 +10,9 @@ import { FornecedorListComponent } from './components/fornecedor-list/fornecedor
 import { PoDynamicModule } from '@po-ui/ng-components';
 import { HomeComponent } from './components/home/home.component';
 import {  HttpClientModule } from '@angular/common/http';
+import { PoButtonModule } from '@po-ui/ng-components';
+
+
 
 
 
@@ -29,6 +32,7 @@ import {  HttpClientModule } from '@angular/common/http';
     RouterModule.forRoot([]),
     PoDynamicModule,
 HttpClientModule,
+PoButtonModule
 
   ],
   providers: [],

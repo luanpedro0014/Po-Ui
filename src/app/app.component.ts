@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { PoMenuItem } from '@po-ui/ng-components';
 import { Cadastro } from './components/cnpj-list/cnpj-list.models';
@@ -18,11 +17,8 @@ import { CadastroService } from './service/cadastro.service';
 
 
 export class AppComponent implements OnInit {
-  cadastro ={} as Cadastro;
-  cadastros: Cadastro[] | undefined;
-  CadastroService: any;
 
-  constructor(private router:Router, CadastroService:CadastroService){
+  constructor(private router:Router){
 
   }
   ngOnInit(): void {
@@ -34,31 +30,6 @@ export class AppComponent implements OnInit {
     { label:'Fornecedor',action:()=>this.router.navigate(['fornecedor-list'])}
   ];
 
-// chama o serviço GET
-  getCadastros() {
-    this.CadastroService.getCadastro().subscribe((cadastros: Cadastro[]) => {
-      this.cadastros = cadastros;
-    });
-  }
-
-  // deleta um CNPJ
-  deleteCNPJ(cadastro: Cadastro) {
-    this.CadastroService.deleteCNPJ(cadastro).subscribe(() => {
-      this.getCadastros();
-    });
-  }
-
-  // copia o CNPJ para ser editado.
-  editCar(cadastro: Cadastro) {
-    this.cadastro = { ...cadastro };
-  }
-
-  // limpa o formulario
-  cleanForm(form: NgForm) {
-    this.getCadastros();
-    form.resetForm();
-    this.cadastro = {} as Cadastro;
-  }
 
 }
 
